@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: 216989136189.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/frontend
+        ports:
+        - containerPort: 80

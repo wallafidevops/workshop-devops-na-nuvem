@@ -1,0 +1,14 @@
+resources:
+  - frontend/k8s/deploy.yml
+  - frontend/k8s/service.yml  
+  - backend/k8s/deploy.yml
+  - backend/k8s/service.yml
+
+images:
+  - name: 216989136189.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/frontend
+    newName: 216989136189.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/frontend
+    newTag: v1.0    
+    
+  - name: 216989136189.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/backend
+    newName: 216989136189.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/backend
+    newTag: v1.0    

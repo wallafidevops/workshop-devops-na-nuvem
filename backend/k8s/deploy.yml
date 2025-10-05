@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: 216989136189.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/backend
+        ports:
+        - containerPort: 80
